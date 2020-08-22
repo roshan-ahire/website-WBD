@@ -2,7 +2,7 @@
   "name": "WBD",
   "version": "1.0.0",
   "description": "Play exchange",
-  "author": "Tushar Sachde",
+  "author": "Roshan",
   "private": true,
   "scripts": {
     "dev": "nuxt",
