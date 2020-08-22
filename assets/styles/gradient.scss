@@ -1,0 +1,35 @@
+$primary-gradient: linear-gradient(to bottom, #dd4f27 0%, #e76f26 100%);
+$gold-gradient: linear-gradient(
+  to bottom,
+  #f4da7b 0%,
+  #b47e11 25%,
+  #fff2a3 50%,
+  #b58010 75%,
+  #f4d875 100%
+);
+.primary {
+  background-image: $primary-gradient; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+// Golden Border
+$gold-border-width: 1px;
+$gold-border-radius: 4px;
+.border--golden {
+  border: $gold-border-width solid transparent !important;
+  z-index: 2 !important;
+  border-radius: $gold-border-radius !important;
+  &:after {
+    content: '';
+    border-radius: $gold-border-radius !important;
+    background-image: $gold-gradient !important;
+    border-image-slice: 1 !important;
+    position: absolute;
+    top: -$gold-border-width;
+    bottom: -$gold-border-width;
+    left: -$gold-border-width;
+    right: -$gold-border-width;
+    z-index: -1 !important;
+  }
+}
+.primary--border {
+  border: 2px solid #dd4f27 !important;
+}
